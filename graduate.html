@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>School Drop Out Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+     background-color: #e0e0e0; 
+}
+
+h2 {
+    text-align: center;
+    color: brown;
+}
+
+.center {
+    width: 60%;
+    margin: auto;
+    border: 3px solid #4d00dbc5;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    background-color: #4CAF50;
+    color: white;
+    padding: 40px 20px;
+    margin: auto;
+    border: dark red;
+    cursor: pointer;
+    width: 90%;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        input[type="text"],
+        select {
+            width: 48%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: blue;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {
+            background-color: #3e8e41;
+        }
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <h2><a href='blank'>School Drop Out Prediction</a></h2>
+
+    <div class="center">
+        <form>
+            <fieldset>
+                <div class="form-group">
+                    <input type="text" id="Name" placeholder="Name" name="Name">
+                    <input type="text" id="age" placeholder="Age" name="Age">
+                    <input type="text" id="Gender" placeholder="Gender (1-male 0-female)" name="Gender">
+                    <select class="form-select" placeholder="Marital Status :" name="Dependents" id="Dependents">
+                        <option value="0">Marital Status</option>
+                        <option value="1">1-single</option>
+                        <option value="2">2-Married</option>
+                        <option value="3">3-widower</option>
+                        <option value="4">4-Divorced</option>
+                        <option value="5">5-Facto union</option>
+                        <option value="6">6-legally separated</option>
+                    </select>
+                    <input type="text" id="Displaced" placeholder="Displaced (1-yes 0-no)" name="Displaced">
+                    <input type="text" id="Debtor" placeholder="Debtor (1-yes 0-no)" name="Debtor">
+                    <input type="text" id="tution" placeholder="Tuition fees up to date (1-yes 0-no)" name="tution">
+                    <input type="text" id="scholarship" placeholder="Scholarship holder (1-yes 0-No)" name="scholarship">
+                    <input type="text" id="marks1" placeholder="Curricular units 1st sem (approved) (range:0-20)" name="marks1">
+                    <input type="text" id="marks2" placeholder="Curricular units 2nd sem (enrolled) (range:0-23)" name="marks2">
+                    <input type="text" id="marks3" placeholder="Curricular units 2nd sem (approved) (range:0-20)" name="marks3">
+                </div>
+            </fieldset>
+            <br>
+            <center><b><button class="button" py-click="get_predictions()">PREDICT</button></b></center>
+            <br>
+        </form>
+    </div>
+</body>
+
+</html>
